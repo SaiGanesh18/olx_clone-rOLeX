@@ -13,7 +13,7 @@ const init = async () => {
         host: 'localhost',
         "routes": {
             "cors": {
-                "origin": ["https://olx-clone-r-o-le-x.vercel.app"], // Replace with your frontend's URL
+                "origin": ["https://olx-clone-r-o-le-x-35kv.vercel.app/"], // Replace with your frontend's URL
                 "headers": ["Accept", "Content-Type"],
                 "additionalHeaders": ["X-Requested-With"],
                 "credentials": true, // If your frontend sends cookies or authentication headers
@@ -29,8 +29,7 @@ const init = async () => {
             return h.continue;
         }
 
-
-        response.header('Access-Control-Allow-Origin', 'https://olx-clone-r-o-le-x.vercel.app'); // Replace with your frontend's URL
+        response.header('Access-Control-Allow-Origin', 'https://olx-clone-r-o-le-x-35kv.vercel.app/'); // Replace with your frontend's URL
         response.header('Access-Control-Expose-Headers', 'Authorization'); // Expose any custom headers you need
         response.header('Access-Control-Allow-Headers', '*');
 
