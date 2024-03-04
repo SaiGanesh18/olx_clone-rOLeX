@@ -10,7 +10,7 @@ const routeHandler = new RouteHandler();
 const init = async () => {
     const server = Hapi.server({
         port: process.env.PORT || 3000, // process.env.PORT
-        host: 'localhost',
+        host: 'olx-clone-r-o-le-x.vercel.app',
         "routes": {
             "cors": {
                 "origin": ["https://olx-clone-r-o-le-x-35kv.vercel.app/"], // Replace with your frontend's URL
