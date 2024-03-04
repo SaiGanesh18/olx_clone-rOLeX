@@ -30,7 +30,7 @@ const init = async () => {
         }
 
 
-        response.header('Access-Control-Allow-Origin', 'http://localhost:3001'); // Replace with your frontend's URL
+        response.header('Access-Control-Allow-Origin', 'https://olx-clone-r-o-le-x.vercel.app'); // Replace with your frontend's URL
         response.header('Access-Control-Expose-Headers', 'Authorization'); // Expose any custom headers you need
         response.header('Access-Control-Allow-Headers', '*');
 
