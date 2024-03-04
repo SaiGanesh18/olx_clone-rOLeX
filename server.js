@@ -39,20 +39,6 @@ const init = async () => {
 
     await server.register(Inert);
 
-    if (process.env.NODE_ENV === "production") {
-        server.route({
-            method: 'GET',
-            path: '/{param*}',
-            handler: {
-                directory: {
-                    path: path.join(__dirname, 'frontside/build'),
-                    redirectToSlash: true,
-                    index: true,
-                },
-            },
-        });
-    }
-
     //register API
 
     server.route({
