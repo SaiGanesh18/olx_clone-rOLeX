@@ -18,7 +18,7 @@
     "sweetalert": "^2.1.2",
     "web-vitals": "^2.1.4"
   },
-  "proxy": "https://olx-clone-r-o-le-x.vercel.app",
+  "proxy": "https://olx-clone-r-o-le-gcowyp5dd-saiganeshs-projects.vercel.app/",
   "scripts": {
     "start": " PORT=3001 react-scripts start",
     "build": "react-scripts build",
