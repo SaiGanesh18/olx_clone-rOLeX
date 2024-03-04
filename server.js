@@ -13,7 +13,7 @@ const init = async () => {
         host: 'localhost',
         "routes": {
             "cors": {
-                "origin": ["http://localhost:3001"], // Replace with your frontend's URL
+                "origin": ["https://olx-clone-r-o-le-x.vercel.app"], // Replace with your frontend's URL
                 "headers": ["Accept", "Content-Type"],
                 "additionalHeaders": ["X-Requested-With"],
                 "credentials": true, // If your frontend sends cookies or authentication headers
