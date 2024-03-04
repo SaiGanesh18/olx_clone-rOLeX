@@ -1,12 +1,19 @@
 const { Client } = require('pg');
+require("dotenv").config();
 
-const client = new Client({
+const proConfig = {
+    connectionString: process.env.DATABASE_URL
+}
+
+const devConfig = {
     user: 'postgres',
     password: 'samsung@135',
     host: 'localhost',
     port: 5432,
     database: 'project_userdetails'
-});
+}
+
+const client = new Client(process.env.NODE_ENV === "production" ? proConfig : devConfig);
 
 //client.connect();
 

@@ -1,5 +1,7 @@
 const Hapi = require('@hapi/hapi');
 const H2o2 = require('@hapi/h2o2');
+const path = require('path');
+const Inert = require('@hapi/inert'); // Import the 'inert' plugin
 
 const RouteHandler = require('./route-handler');
 
@@ -7,7 +9,7 @@ const routeHandler = new RouteHandler();
 
 const init = async () => {
     const server = Hapi.server({
-        port: 3000,
+        port: process.env.PORT || 3000, // process.env.PORT
         host: 'localhost',
         "routes": {
             "cors": {
@@ -34,6 +36,22 @@ const init = async () => {
 
         return h.continue;
     });
+
+    await server.register(Inert);
+
+    if (process.env.NODE_ENV === "production") {
+        server.route({
+            method: 'GET',
+            path: '/{param*}',
+            handler: {
+                directory: {
+                    path: path.join(__dirname, 'frontside/build'),
+                    redirectToSlash: true,
+                    index: true,
+                },
+            },
+        });
+    }
 
     //register API
 

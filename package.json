@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "18.15.0",
+    "npm": "9.5.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "cd frontside && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
@@ -13,9 +18,11 @@
   "dependencies": {
     "@hapi/h2o2": "^10.0.3",
     "@hapi/hapi": "^21.3.2",
+    "@hapi/inert": "^7.1.0",
     "amqplib": "^0.10.3",
     "bcryptjs": "^2.4.3",
     "cron": "^2.4.3",
+    "dotenv": "^16.4.5",
     "hapi": "^18.1.0",
     "hapi-cors-headers": "^1.0.3",
     "node-cron": "^3.0.2",
