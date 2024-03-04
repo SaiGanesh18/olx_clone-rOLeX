@@ -2,7 +2,7 @@ const { Client } = require('pg');
 require("dotenv").config();
 
 const proConfig = {
-    connectionString: process.env.DATABASE_URL
+    connectionString: process.env.POSTGRES_URL
 }
 
 const devConfig = {
